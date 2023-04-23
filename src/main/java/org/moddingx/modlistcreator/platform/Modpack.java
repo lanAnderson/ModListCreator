@@ -83,9 +83,8 @@ public interface Modpack {
     record Minecraft(String version, String loader, String loaderVersion) {}
 
     enum Type {
-        CURSEFORGE("manifest.json", CurseModpack::load),
-        MODRINTH("modrinth.index.json", ModrinthModpack::load);
-        
+        CURSEFORGE("manifest.json", CurseModpack::load);
+
         private final String manifestPath;
         private final IOFunction<JsonElement, Optional<? extends Modpack>> factory;
 

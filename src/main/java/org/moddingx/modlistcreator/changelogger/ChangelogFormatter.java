@@ -46,7 +46,7 @@ public class ChangelogFormatter {
             target.addSubHeader("Added");
             target.beginList(false);
             for (Modpack.File file : added) {
-                target.addListElement(target.formatLink(file.projectName(), file.projectWebsite()) + " (by " + target.formatLink(file.author(), file.authorWebsite()) + ")");
+                target.addListElement(target.formatLink(file.projectName()) + " (by " + target.formatLink(file.author()) + ")");
             }
             target.endList();
         }
@@ -55,7 +55,7 @@ public class ChangelogFormatter {
             target.addSubHeader("Removed");
             target.beginList(false);
             for (Modpack.File file : removed) {
-                target.addListElement(target.formatLink(file.projectName(), file.projectWebsite()) + " (by " + target.formatLink(file.author(), file.authorWebsite()) + ")");
+                target.addListElement(target.formatLink(file.projectName()) + " (by " + target.formatLink(file.author()) + ")");
             }
             target.endList();
         }
@@ -64,8 +64,8 @@ public class ChangelogFormatter {
             target.addSubHeader("Changed");
             target.beginList(false);
             for (ChangedFile changedFile : changed) {
-                String oldFile = target.formatLink(changedFile.oldFile.fileName(), changedFile.oldFile.fileWebsite());
-                String newFile = target.formatLink(changedFile.newFile.fileName(), changedFile.newFile.fileWebsite());
+                String oldFile = target.formatLink(changedFile.oldFile.fileName());
+                String newFile = target.formatLink(changedFile.newFile.fileName());
                 target.addListElement(oldFile + " -> " + newFile);
             }
             target.endList();

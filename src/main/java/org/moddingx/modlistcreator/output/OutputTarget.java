@@ -11,7 +11,7 @@ public interface OutputTarget {
     void beginList(boolean numbered);
     void addListElement(String content);
     void endList();
-    String formatLink(String text, URI url);
+    String formatLink(String text);
     
     String result();
 

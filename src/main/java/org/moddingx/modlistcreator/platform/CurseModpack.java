@@ -133,5 +133,7 @@ public record CurseModpack(
         public URI authorWebsite() {
             return URI.create("https://www.curseforge.com/members/" + URLEncoder.encode(this.author(), StandardCharsets.UTF_8) + "/projects");
         }
+
+
     }
 }

@@ -15,8 +15,8 @@ public class ModListFormatter {
         
         target.beginList(false);
         for (Modpack.File file : pack.files().stream().sorted(Comparator.comparing(Modpack.File::projectSlug)).toList()) {
-            String projectPart = detailed ? target.formatLink(file.fileName(), file.fileWebsite()) : target.formatLink(file.projectName(), file.projectWebsite());
-            target.addListElement(projectPart + " (by " + target.formatLink(file.author(), file.authorWebsite()) + ")");
+            String projectPart = detailed ? target.formatLink(file.fileName()) : target.formatLink(file.projectName());
+            target.addListElement(projectPart + " (by " + target.formatLink(file.author()) + ")");
         }
         target.endList();
         

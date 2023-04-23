@@ -47,8 +47,8 @@ public class HtmlTarget implements OutputTarget {
     }
 
     @Override
-    public String formatLink(String text, URI url) {
-        return new Element("a").attr("href", url.toString()).append(text).outerHtml();
+    public String formatLink(String text) {
+        return new Element("a").attr("href");
     }
 
     @Override

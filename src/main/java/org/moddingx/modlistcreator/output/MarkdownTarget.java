@@ -48,8 +48,8 @@ public class MarkdownTarget implements OutputTarget {
     }
 
     @Override
-    public String formatLink(String text, URI url) {
-        return "[" + text + "](" + url + ")";
+    public String formatLink(String text) {
+        return "[" + text + "]";
     }
 
     @Override

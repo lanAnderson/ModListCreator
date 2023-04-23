@@ -61,7 +61,7 @@ public class PlainTextTarget implements OutputTarget {
     }
 
     @Override
-    public String formatLink(String text, URI url) {
+    public String formatLink(String text) {
         return text;
     }
 
